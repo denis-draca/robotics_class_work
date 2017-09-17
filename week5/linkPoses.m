@@ -1,6 +1,8 @@
 function [ transforms ] = linkPoses( q, robot)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%q - robot joint angles
+%robot -  seriallink robot model
+%transforms - list of transforms
+
 links = robot.links;
 transforms = zeros(4, 4, length(links) + 1);
 transforms(:,:,1) = robot.base;

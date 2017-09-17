@@ -15,7 +15,7 @@ for qIndex = 1:size(qMatrix,1)
     tr(:,:,1) = robot.base;
     L = robot.links;
     
-    tr = linkPoses(q, robot);
+    tr = linkPoses(q, robot);%added this here
 
     % Go through each link and also each triangle face
     for i = 1 : size(tr,3)-1    
